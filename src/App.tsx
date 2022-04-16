@@ -24,9 +24,9 @@ export default function App() {
       const txt = await response.blob();
       const reader = new FileReader();
       reader.onload = (event) => {
-        const text = event?.target?.result as string;
+        const text = event?.target?.result;
         if (text) {
-          const arr = text.split("\n");
+          const arr = (text as string).split("\n");
           console.log("loaded:", fileUrl);
           onDone(arr);
         }
@@ -41,7 +41,7 @@ export default function App() {
         }),
         loadFile("/adjectives.txt", (arr) => {
           setAdjectives(arr);
-        })
+        }),
       ]);
       setLoading(false);
     };
