@@ -1,0 +1,22 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+.generateButton {
+  width: 120px;
+  height: 120px;
+  font-size: 28px;
+  text-transform: uppercase;
+  background: #000;
+  color: #fff;
+  border-radius: 50%;
+}
+
+.bandName {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 160px;
+  font-size: 24px;
+}
